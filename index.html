@@ -2,127 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nishu Chocolates 💝</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nishu Chocolates 💖</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap');
+
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #fff0f5, #ffe4e1);
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe6eb, #ffd6ec);
+      font-family: 'Roboto', sans-serif;
       overflow-x: hidden;
-      text-align: center;
-      color: #3d2c29;
     }
 
-    h1 {
+    .header {
+      text-align: center;
       font-family: 'Pacifico', cursive;
       font-size: 3em;
-      color: #b22222;
-      margin-top: 50px;
-    }
-
-    p {
-      font-size: 1.2em;
-      margin: 20px auto;
-      max-width: 600px;
-    }
-
-    .box {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 20px;
-      margin: 40px auto;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      max-width: 700px;
-    }
-
-    .hearts {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
+      color: #d63384;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .heart {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: red;
-      transform: rotate(45deg);
-      animation: float 8s linear infinite;
+      color: red;
+      animation: heartbeat 1s infinite;
+      display: inline-block;
     }
 
-    .heart::before,
-    .heart::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: red;
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .message-box {
+      background: #fff;
+      margin: 40px auto;
+      padding: 30px;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .message-box p {
+      font-size: 1.2em;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 1em;
+      color: #777;
+    }
+
+    .footer .heart {
+      color: #d63384;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .couple-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
       border-radius: 50%;
+      margin: 20px;
+      border: 5px solid #fff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
-    .heart::before {
-      top: -10px;
-      left: 0;
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
 
-    .heart::after {
-      left: -10px;
+    .falling-hearts {
+      position: fixed;
       top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1000;
     }
 
-    @keyframes float {
-      0% {
-        transform: translateY(0) rotate(45deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh) rotate(45deg);
+    .falling-hearts span {
+      position: absolute;
+      display: block;
+      color: red;
+      font-size: 2em;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
         opacity: 0;
       }
-    }
-
-    footer {
-      margin: 40px 0 20px;
-      font-size: 0.9em;
-      color: #444;
     }
   </style>
 </head>
 <body>
+  <div class="falling-hearts" id="hearts"></div>
 
-  <div class="hearts" id="hearts"></div>
-
-  <h1>Nishu Chocolates 💖</h1>
-  <div class="box">
-    <p>Welcome to the sweetest place on the web! 🍫💕</p>
-    <p>Our handmade chocolates are made with love, just like your favorite memories. Perfect for gifting, celebrating, or simply treating yourself. 😋</p>
-    <p>Explore our collection and spread love, one bite at a time. ✨</p>
+  <div class="header">
+    Nishu Chocolates <span class="heart">❤️</span>
   </div>
 
-  <footer>
-    Made with 💘 by Sujal
-  </footer>
+  <div class="gallery">
+    <img src="https://placekitten.com/200/200" alt="Groom" class="couple-img" />
+    <img src="https://placekitten.com/201/200" alt="Bride" class="couple-img" />
+  </div>
+
+  <div class="message-box">
+    <p>Welcome to a piece of my heart ❤️</p>
+    <p>This isn’t a website. It’s a memory, a smile, a soft kiss in digital form — just like you, Nishu 😘</p>
+    <p>You make everything sweeter. This is just my silly way to say — I love you more than chocolates 🍫💌</p>
+    <p>Always yours,<br/>Sujal 💖</p>
+  </div>
+
+  <div class="footer">
+    Made with <span class="heart">💘</span> by Sujal
+  </div>
+
+  <!-- Music: Ed Sheeran - Perfect -->
+  <audio autoplay loop>
+    <source src="https://dl.dropboxusercontent.com/s/0eq6hnm4f5j5c4p/Ed%20Sheeran%20-%20Perfect.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
   <script>
-    const hearts = document.getElementById('hearts');
+    const heartsContainer = document.getElementById("hearts");
+
     function createHeart() {
-      const heart = document.createElement('div');
-      heart.className = 'heart';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = 4 + Math.random() * 4 + 's';
-      hearts.appendChild(heart);
+      const heart = document.createElement("span");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+      heartsContainer.appendChild(heart);
+
       setTimeout(() => {
         heart.remove();
-      }, 8000);
+      }, 5000);
     }
+
     setInterval(createHeart, 300);
   </script>
 </body>
 </html>
+
 
