@@ -3,158 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nishu Chocolates 💖</title>
+  <title>Nishu, This Is For You Nisha 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&family=Poppins&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap');
-
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom right, #ffe6eb, #ffd6ec);
+      background: linear-gradient(to bottom right, #ffd1dc, #ffe6eb);
       font-family: 'Roboto', sans-serif;
       overflow-x: hidden;
     }
 
-    .header {
+    h1, h2, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      padding: 2rem;
       text-align: center;
+    }
+
+    .title {
       font-family: 'Pacifico', cursive;
-      font-size: 3em;
-      color: #d63384;
-      margin-top: 40px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .heart {
-      color: red;
-      animation: heartbeat 1s infinite;
-      display: inline-block;
-    }
-
-    @keyframes heartbeat {
-      0% { transform: scale(1); }
-      25% { transform: scale(1.2); }
-      50% { transform: scale(1); }
-      75% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+      color: #d6336c;
+      font-size: 3rem;
+      margin-top: 2rem;
     }
 
     .message-box {
-      background: #fff;
-      margin: 40px auto;
-      padding: 30px;
-      width: 80%;
-      max-width: 600px;
+      background: white;
       border-radius: 20px;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 700px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      animation: fadeIn 3s ease-in-out;
-    }
-
-    .message-box p {
-      font-size: 1.2em;
-      color: #444;
+      font-size: 1.2rem;
       line-height: 1.6;
     }
 
-    .footer {
-      text-align: center;
+    .apology {
+      background: #fff0f5;
+      border-radius: 20px;
       padding: 20px;
-      font-size: 1em;
-      color: #777;
-    }
-
-    .footer .heart {
+      max-width: 600px;
+      margin: 30px auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      text-align: center;
+      font-size: 18px;
       color: #d63384;
+      font-family: 'Poppins', sans-serif;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .apology h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #c9184a;
     }
 
-    .couple-img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin: 20px;
-      border: 5px solid #fff;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    .footer {
+      margin-top: 4rem;
+      font-size: 1rem;
+      color: #333;
     }
 
-    .gallery {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-
-    .falling-hearts {
+    .hearts {
       position: fixed;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
-      z-index: 1000;
+      overflow: hidden;
+      z-index: 0;
     }
 
-    .falling-hearts span {
+    .heart {
       position: absolute;
-      display: block;
-      color: red;
-      font-size: 2em;
-      animation: fall 5s linear infinite;
+      width: 20px;
+      height: 20px;
+      background: url('https://i.imgur.com/7x0Q8Px.png') no-repeat center;
+      background-size: contain;
+      animation: fall 10s linear infinite;
     }
 
     @keyframes fall {
-      to {
-        transform: translateY(100vh);
+      0% {
+        transform: translateY(-100%) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
         opacity: 0;
       }
+    }
+
+    audio {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <div class="falling-hearts" id="hearts"></div>
-
-  <div class="header">
-    Nishu Chocolates <span class="heart">❤️</span>
-  </div>
-
-  <div class="gallery">
-    <img src="https://placekitten.com/200/200" alt="Groom" class="couple-img" />
-    <img src="https://placekitten.com/201/200" alt="Bride" class="couple-img" />
-  </div>
-
-  <div class="message-box">
-    <p>Welcome to a piece of my heart ❤️</p>
-    <p>This isn’t a website. It’s a memory, a smile, a soft kiss in digital form — just like you, Nishu 😘</p>
-    <p>You make everything sweeter. This is just my silly way to say — I love you more than chocolates 🍫💌</p>
-    <p>Always yours,<br/>Sujal 💖</p>
-  </div>
-
-  <div class="footer">
-    Made with <span class="heart">💘</span> by Sujal
-  </div>
-
-  <!-- Music: Ed Sheeran - Perfect -->
   <audio autoplay loop>
-    <source src="https://dl.dropboxusercontent.com/s/0eq6hnm4f5j5c4p/Ed%20Sheeran%20-%20Perfect.mp3" type="audio/mp3">
+    <source src="https://dl.sndup.net/fzvg/Perfect%20-%20Ed%20Sheeran.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
 
+  <div class="hearts" id="hearts"></div>
+
+  <div class="container">
+    <h1 class="title">For You, Nishu 💖</h1>
+    <div class="message-box">
+      <p>Hey love,</p>
+      <p>I know you’re not talking to me right now, but I wanted to do something special for you.</p>
+      <p>I know how much you love chocolates 🍫, so I made this little page... just for you.</p>
+      <p>I’m really sorry for whatever hurt I caused, it was never my intention. 🙏</p>
+      <p>You mean the world to me and I miss you more than words can say.</p>
+      <p>This isn’t just a page—it’s a piece of my heart, wrapped in code and love.</p>
+      <p>Please smile while reading this, because your smile means everything. 💕</p>
+    </div>
+
+    <div class="apology">
+      <h2>I'm Really Sorry 😔</h2>
+      <p>I know you're upset and not talking to me... but I truly didn’t mean to hurt you.</p>
+      <p>I made this with all my heart because I know how much you love chocolates 🍫 and I love <strong>you</strong> even more.</p>
+      <p>Please forgive me ❤️</p>
+    </div>
+
+    <div class="footer">
+      Made with love 💗 by Sujal
+    </div>
+  </div>
+
   <script>
-    const heartsContainer = document.getElementById("hearts");
+    const heartContainer = document.getElementById('hearts');
 
     function createHeart() {
-      const heart = document.createElement("span");
-      heart.textContent = "❤️";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = Math.random() * 2 + 3 + "s";
-      heartsContainer.appendChild(heart);
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+      heartContainer.appendChild(heart);
 
       setTimeout(() => {
         heart.remove();
-      }, 5000);
+      }, 10000);
     }
 
     setInterval(createHeart, 300);
